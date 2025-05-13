@@ -98,56 +98,6 @@ function loadGallery() {
                   `
         )
         .join("");
-
-      // Add lightbox functionality
-      const galleryItems = document.querySelectorAll(".gallery-item");
-      galleryItems.forEach((item) => {
-        item.addEventListener("click", () => {
-          const img = item.querySelector("img");
-          openLightbox(img.src, img.alt);
-        });
-      });
-    }
-  });
-}
-
-// Lightbox functionality
-function openLightbox(src, alt) {
-  const lightbox = document.createElement("div");
-  lightbox.classList.add("lightbox");
-
-  lightbox.innerHTML = `
-          <div class="lightbox-content">
-              <span class="close-lightbox">&times;</span>
-              <img src="${src}" alt="${alt}">
-              <p>${alt}</p>
-          </div>
-      `;
-
-  document.body.appendChild(lightbox);
-
-  // Prevent scrolling
-  document.body.style.overflow = "hidden";
-
-  // Show lightbox with animation
-  setTimeout(() => {
-    lightbox.style.opacity = "1";
-  }, 10);
-
-  // Close lightbox
-  const closeLightbox = lightbox.querySelector(".close-lightbox");
-  closeLightbox.addEventListener("click", () => {
-    lightbox.style.opacity = "0";
-    setTimeout(() => {
-      document.body.removeChild(lightbox);
-      document.body.style.overflow = "";
-    }, 300);
-  });
-
-  // Close on click outside
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) {
-      closeLightbox.click();
     }
   });
 }

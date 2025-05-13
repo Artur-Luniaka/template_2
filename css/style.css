@@ -245,6 +245,11 @@ p {
 
 .logo img {
   height: 60px;
+  border-radius: 10px;
+
+  @media (min-width: 768px) {
+    height: 80px;
+  }
 }
 
 .main-nav {
@@ -292,8 +297,9 @@ p {
 /* Hero Section */
 .hero {
   background-color: var(--bg-light);
-  background-image: url("../images/mario-wonder-bg.jpg");
-  background-size: cover;
+  background-image: url("../images/hero-img.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
   color: var(--text-white);
   padding: var(--spacing-xl) 0;
@@ -709,9 +715,8 @@ p {
   margin-bottom: var(--spacing-lg);
 }
 
-.footer-logo img {
-  height: 50px;
-  margin-bottom: var(--spacing-md);
+.footer-logo a {
+  color: var(--secondary-color);
 }
 
 .footer-links h3,
@@ -761,9 +766,18 @@ p {
 }
 
 .footer-bottom {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-top: var(--spacing-md);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 30px;
+  }
 }
 
 .footer-bottom a {
@@ -966,4 +980,33 @@ p {
     margin-right: 0;
     margin-bottom: var(--spacing-sm);
   }
+}
+
+/* Policy Pages */
+.policy-box {
+  padding: 20px 0;
+}
+
+.policy-main-title {
+  color: var(--accent-color);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.policy-title {
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.policy-text {
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.policy-text:last-child {
+  margin-bottom: 20px;
+}
+
+.policy-text-accent {
+  color: var(--primary-color);
 }

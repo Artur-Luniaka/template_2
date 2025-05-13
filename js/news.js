@@ -85,7 +85,6 @@ function displayNews(news, page) {
                 <span class="news-category">${item.category}</span>
                 <h3>${item.title}</h3>
                 <p>${item.summary}</p>
-                <a href="#" class="btn btn-outline">Read More</a>
             </div>
         </div>
     `
