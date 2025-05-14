@@ -298,7 +298,7 @@ p {
 .hero {
   background-color: var(--bg-light);
   background-image: url("../images/hero-img.jpg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   color: var(--text-white);
