@@ -28,11 +28,6 @@
       "image": "./images/feature-2.jpg"
     },
     {
-      "title": "Cooperative Multiplayer",
-      "description": "Team up with friends in local multiplayer mode for chaotic fun. Work together to overcome challenges or compete to see who can collect the most coins.",
-      "image": "./images/feature-3.jpg"
-    },
-    {
       "title": "Badge System",
       "description": "Customize your abilities with the new Badge system. Equip badges to gain special powers like wall-jumping, higher jumps, or even starting levels with power-ups.",
       "image": "./images/feature-4.jpg"
@@ -41,11 +36,6 @@
       "title": "Talking Flowers",
       "description": "Meet the quirky talking flowers that inhabit the Flower Kingdom. They'll provide hints, challenges, and plenty of personality throughout your adventure.",
       "image": "./images/feature-5.jpg"
-    },
-    {
-      "title": "Hidden Wonders",
-      "description": "Discover secret areas, hidden Wonder Seeds, and special challenge rooms throughout each level. Exploration is rewarded with unique surprises!",
-      "image": "./images/feature-6.jpg"
     }
   ],
   "gallery": [
@@ -56,22 +46,6 @@
     {
       "image": "./images/gallery-2.jpg",
       "alt": "Elephant Mario using his trunk to spray water at enemies"
-    },
-    {
-      "image": "./images/gallery-3.jpg",
-      "alt": "A Wonder Flower transformation turning the world upside down"
-    },
-    {
-      "image": "./images/gallery-4.jpg",
-      "alt": "Multiplayer action with Mario, Luigi, Peach and Toad"
-    },
-    {
-      "image": "./images/gallery-5.jpg",
-      "alt": "Underwater level with stunning visuals and sea creatures"
-    },
-    {
-      "image": "./images/gallery-6.jpg",
-      "alt": "Mario facing off against Bowser in an epic boss battle"
     },
     {
       "image": "./images/gallery-7.jpg",
