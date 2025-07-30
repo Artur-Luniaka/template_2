@@ -457,7 +457,7 @@ function launchRampBoost() {
   }
 
   // In real app, this would launch the game
-  alert("Game launching... Get ready for some sick tricks!");
+  // Game launch functionality removed
 }
 
 // Export functions for use in other scripts

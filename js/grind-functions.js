@@ -226,16 +226,7 @@ function initializeTrickAnimations() {
 }
 
 // Urban utility functions
-function performStreetFlip() {
-  console.log("🔄 Performing street flip...");
-
-  // Add flip animation to body
-  document.body.style.animation = "streetFlip 0.6s ease-in-out";
-
-  setTimeout(() => {
-    document.body.style.animation = "";
-  }, 600);
-}
+// performStreetFlip function removed
 
 function activateGrindMode() {
   console.log("⚡ Activating grind mode...");
@@ -252,7 +243,7 @@ function executeUrbanCombo() {
   console.log("🎯 Executing urban combo...");
 
   // Chain multiple urban effects
-  performStreetFlip();
+  // performStreetFlip() removed
 
   setTimeout(() => {
     activateGrindMode();
@@ -331,7 +322,7 @@ document.addEventListener("keydown", function (event) {
       break;
     case "f":
     case "F":
-      performStreetFlip();
+      // performStreetFlip() removed
       break;
     case "c":
     case "C":
@@ -357,11 +348,7 @@ const urbanStyles = `
         }
     }
     
-    @keyframes streetFlip {
-        0% { transform: rotateY(0deg); }
-        50% { transform: rotateY(180deg); }
-        100% { transform: rotateY(360deg); }
-    }
+    // streetFlip animation removed
     
     @keyframes urbanRipple {
         0% {
@@ -402,7 +389,7 @@ document.head.appendChild(styleSheet);
 
 // Export urban functions
 window.urbanGrind = {
-  performStreetFlip,
+  // performStreetFlip removed
   activateGrindMode,
   executeUrbanCombo,
   monitorUrbanPerformance,
