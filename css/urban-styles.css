@@ -54,6 +54,11 @@ body {
   overflow-x: hidden;
 }
 
+/* Block scroll when mobile menu is open */
+body.menu-open {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -234,7 +239,6 @@ body {
 
 /* Hero Section */
 .hero-zone {
-  height: 100vh;
   background: var(--speed-rush);
   display: flex;
   align-items: center;
@@ -259,7 +263,7 @@ body {
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px;
 }
 
 .hero-features {
@@ -1710,7 +1714,7 @@ body {
 
 @media (max-width: 480px) {
   .hero-content {
-    padding: 15px;
+    padding: 20px;
   }
 
   .main-title {

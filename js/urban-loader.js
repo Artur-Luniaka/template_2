@@ -56,6 +56,13 @@ function initializeBurgerMenu() {
     burgerButton.addEventListener("click", function () {
       burgerButton.classList.toggle("active");
       mobileMenu.classList.toggle("active");
+
+      // Toggle body scroll lock
+      if (mobileMenu.classList.contains("active")) {
+        document.body.classList.add("menu-open");
+      } else {
+        document.body.classList.remove("menu-open");
+      }
     });
 
     // Close menu when clicking on links
@@ -64,6 +71,7 @@ function initializeBurgerMenu() {
       link.addEventListener("click", function () {
         burgerButton.classList.remove("active");
         mobileMenu.classList.remove("active");
+        document.body.classList.remove("menu-open");
       });
     });
 
@@ -75,6 +83,7 @@ function initializeBurgerMenu() {
       ) {
         burgerButton.classList.remove("active");
         mobileMenu.classList.remove("active");
+        document.body.classList.remove("menu-open");
       }
     });
   }
