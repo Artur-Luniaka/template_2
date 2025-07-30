@@ -1,0 +1,2158 @@
+/* Urban Street Culture CSS Variables */
+:root {
+  --speed-rush: #ff6b35;
+  --deck-shadow: #2c3e50;
+  --grip-vibe: #34495e;
+  --urban-flow: #ecf0f1;
+  --trick-glow: #e74c3c;
+  --rail-metal: #95a5a6;
+  --park-concrete: #bdc3c7;
+  --street-graffiti: #9b59b6;
+  --wheel-rubber: #2c3e50;
+  --ramp-gradient: linear-gradient(135deg, #ff6b35, #f39c12);
+  --grind-spark: #f1c40f;
+  --urban-night: #1a1a1a;
+  --street-light: #ffffff;
+  --trick-shadow: rgba(0, 0, 0, 0.3);
+  --urban-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--deck-shadow);
+  background-color: var(--urban-flow);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Typography */
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--street-light);
+  text-shadow: 2px 2px 4px var(--trick-shadow);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero-slogan {
+  font-size: 1.2rem;
+  color: var(--urban-flow);
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--deck-shadow);
+  text-align: center;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--ramp-gradient);
+  border-radius: 2px;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: var(--deck-shadow);
+  text-align: center;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.page-subtitle {
+  font-size: 1.1rem;
+  color: var(--grip-vibe);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Header Styles */
+.urban-header {
+  background: var(--urban-night);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px var(--trick-shadow);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 20px;
+  margin: 0 auto;
+}
+
+.logo-text {
+  color: var(--speed-rush);
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
+}
+
+.logo-link {
+  text-decoration: none;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: var(--urban-flow);
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: var(--urban-transition);
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--speed-rush);
+}
+
+/* Burger Menu */
+.burger-zone {
+  display: none;
+}
+
+.burger-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.burger-line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: var(--urban-flow);
+  margin: 5px 0;
+  transition: var(--urban-transition);
+}
+
+.mobile-menu {
+  display: block;
+  position: fixed;
+  top: 70px;
+  left: -100%;
+  width: 100%;
+  height: calc(100vh - 70px);
+  background: var(--urban-night);
+  z-index: 999;
+  transition: left 0.3s ease;
+  padding: 2rem;
+}
+
+.mobile-menu.active {
+  left: 0;
+}
+
+.mobile-nav-list {
+  list-style: none;
+}
+
+.mobile-nav-item {
+  margin: 1rem 0;
+}
+
+.mobile-nav-link {
+  color: var(--urban-flow);
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  padding: 0.5rem 0;
+  transition: var(--urban-transition);
+}
+
+.mobile-nav-link:hover {
+  color: var(--speed-rush);
+}
+
+/* Hero Section */
+.hero-zone {
+  height: 100vh;
+  background: var(--speed-rush);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 70px;
+}
+
+.hero-background {
+  display: none;
+}
+
+.trick-overlay {
+  display: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-features {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.features-list {
+  flex: 1;
+  text-align: left;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--street-light);
+}
+
+.feature-item:last-child {
+  margin-bottom: 0;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  min-width: 40px;
+}
+
+.feature-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 400px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.play-button {
+  background: var(--street-light);
+  color: var(--speed-rush);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--urban-transition);
+  box-shadow: 0 4px 15px var(--trick-shadow);
+}
+
+.play-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px var(--trick-shadow);
+  background: var(--speed-rush);
+  color: var(--street-light);
+}
+
+/* Section Styles */
+/* Street Ride Zone - Big Card Design */
+.street-ride-zone {
+  padding: 4rem 0;
+}
+
+.street-ride-card {
+  position: relative;
+  background: var(--street-light);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-height: 500px;
+}
+
+.street-ride-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.street-ride-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.street-ride-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.street-ride-content {
+  position: relative;
+  z-index: 3;
+  padding: 3rem;
+  text-align: center;
+}
+
+.street-ride-title {
+  font-size: 2.5rem;
+  color: var(--street-light);
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 800;
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.street-ride-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--ramp-gradient);
+  border-radius: 2px;
+}
+
+.street-ride-description {
+  font-size: 1.2rem;
+  color: var(--street-light);
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.street-ride-subtitle {
+  font-size: 1rem;
+  color: var(--urban-flow);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.street-ride-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.street-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.8rem 1.2rem;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: var(--urban-transition);
+  border: 2px solid transparent;
+}
+
+.street-feature-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border-color: var(--speed-rush);
+}
+
+.street-feature-icon {
+  font-size: 1.5rem;
+}
+
+.street-feature-text {
+  font-weight: 600;
+  color: var(--deck-shadow);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+
+/* How to Trick Zone - Big Card Design */
+.trick-tutorial-zone {
+  padding: 4rem 0;
+}
+
+.trick-tutorial-card {
+  position: relative;
+  background: var(--street-light);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-height: 600px;
+}
+
+.trick-tutorial-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--speed-rush);
+  z-index: 1;
+}
+
+.trick-tutorial-content {
+  position: relative;
+  z-index: 2;
+  padding: 3rem;
+  text-align: center;
+}
+
+.trick-tutorial-title {
+  font-size: 2.5rem;
+  color: var(--street-light);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 800;
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.trick-tutorial-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--street-light);
+  border-radius: 2px;
+}
+
+.trick-tutorial-description {
+  font-size: 1.2rem;
+  color: var(--street-light);
+  margin-bottom: 3rem;
+  line-height: 1.8;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.trick-tutorial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Dynamic tutorial cards styling */
+.trick-tutorial-grid .tutorial-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: var(--urban-transition);
+  border: 2px solid transparent;
+  text-align: center;
+}
+
+.trick-tutorial-grid .tutorial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  border-color: var(--street-light);
+}
+
+.trick-tutorial-grid .tutorial-card .tutorial-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.trick-tutorial-grid .tutorial-card h3 {
+  color: var(--deck-shadow);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.trick-tutorial-grid .tutorial-card p {
+  color: var(--grip-vibe);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.trick-tutorial-grid .tutorial-card .trick-difficulty {
+  margin-top: 1rem;
+}
+
+.trick-tutorial-grid .tutorial-card .difficulty-badge {
+  background: var(--ramp-gradient);
+  color: var(--street-light);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+/* Rider Shoutouts Zone - Styled Cards */
+.rider-shoutouts-zone {
+  padding: 4rem 0;
+  background: var(--urban-flow);
+}
+
+.shoutouts-description {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--grip-vibe);
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.shoutouts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 2 cards per row on tablets */
+@media (min-width: 768px) {
+  .shoutouts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 3 cards per row on wide screens */
+@media (min-width: 1200px) {
+  .shoutouts-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Dynamic shoutout cards styling */
+.shoutouts-grid .shoutout-card {
+  position: relative;
+  background: var(--street-light);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transition: var(--urban-transition);
+  min-height: 300px;
+}
+
+.shoutouts-grid .shoutout-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+}
+
+.shoutouts-grid .shoutout-card .shoutout-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.shoutouts-grid .shoutout-card .shoutout-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.shoutouts-grid .shoutout-card .shoutout-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.shoutouts-grid .shoutout-card .shoutout-content {
+  position: relative;
+  z-index: 3;
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.shoutouts-grid .shoutout-card .shoutout-header {
+  margin-bottom: 1rem;
+}
+
+.shoutouts-grid .shoutout-card .shoutout-name {
+  color: var(--street-light);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.shoutouts-grid .shoutout-card .shoutout-title {
+  color: var(--speed-rush);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.shoutouts-grid .shoutout-card .shoutout-text {
+  color: var(--urban-flow);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  flex-grow: 1;
+  margin: 1rem 0;
+}
+
+.shoutouts-grid .shoutout-card .shoutout-rating {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.3rem;
+}
+
+.shoutouts-grid .shoutout-card .shoutout-rating .star {
+  color: var(--grind-spark);
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Park Challenges Zone - Styled Cards */
+.park-challenges-zone {
+  padding: 4rem 0;
+  background: var(--urban-flow);
+}
+
+.challenges-description {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--grip-vibe);
+  margin-bottom: 1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.challenges-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--grip-vibe);
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.challenges-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 2 cards per row on tablets */
+@media (min-width: 768px) {
+  .challenges-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 3 cards per row on wide screens */
+@media (min-width: 1200px) {
+  .challenges-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Dynamic challenge cards styling */
+.challenges-grid .challenge-card {
+  background: var(--speed-rush);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transition: var(--urban-transition);
+  text-align: center;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.challenges-grid .challenge-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+}
+
+.challenges-grid .challenge-card h3 {
+  color: var(--street-light);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.challenges-grid .challenge-card p {
+  color: var(--street-light);
+  line-height: 1.6;
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Scooter Mods Zone - Big Card Design */
+.scooter-mods-zone {
+  padding: 4rem 0;
+}
+
+.scooter-mods-card {
+  position: relative;
+  background: var(--street-light);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-height: 500px;
+}
+
+.scooter-mods-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.scooter-mods-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.scooter-mods-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.scooter-mods-content {
+  position: relative;
+  z-index: 3;
+  padding: 3rem;
+  text-align: center;
+}
+
+.scooter-mods-title {
+  font-size: 2.5rem;
+  color: var(--street-light);
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 800;
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.scooter-mods-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--ramp-gradient);
+  border-radius: 2px;
+}
+
+.scooter-mods-description {
+  font-size: 1.2rem;
+  color: var(--street-light);
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.scooter-mods-subtitle {
+  font-size: 1rem;
+  color: var(--urban-flow);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.scooter-mods-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.mod-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.8rem 1.2rem;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: var(--urban-transition);
+  border: 2px solid transparent;
+}
+
+.mod-feature-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border-color: var(--speed-rush);
+}
+
+.mod-feature-icon {
+  font-size: 1.5rem;
+}
+
+.mod-feature-text {
+  font-weight: 600;
+  color: var(--deck-shadow);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+
+/* Other sections padding */
+.freestyle-feed-zone,
+.contact-info-zone,
+.map-zone,
+.contact-form-zone,
+.contact-map-zone,
+.disclaimer-content-zone,
+.cookie-content-zone,
+.privacy-content-zone {
+  padding: 4rem 0;
+}
+
+/* Game Updates Section Card */
+.game-updates-zone {
+  padding: 4rem 0;
+  background: var(--street-light);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px var(--trick-shadow);
+  margin: 2rem 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-updates-zone::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../assets/scooter-section.jpg") center/cover;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.game-updates-zone .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Freestyle Feed Section Card */
+.freestyle-feed-zone {
+  padding: 4rem 0;
+  background: var(--street-light);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px var(--trick-shadow);
+  margin: 2rem 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.freestyle-feed-zone::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../assets/scooter-hero.jpg") center/cover;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.freestyle-feed-zone .container {
+  position: relative;
+  z-index: 2;
+}
+
+.page-header-zone {
+  padding: 6rem 0 2rem;
+  background: var(--speed-rush);
+  margin-top: 70px;
+}
+
+/* Grid Layouts */
+.features-grid,
+.tutorial-grid,
+.mods-grid,
+.feed-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.updates-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.feed-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.feature-card,
+.challenge-card,
+.mod-card,
+.update-card,
+.feed-card {
+  background: var(--street-light);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px var(--trick-shadow);
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+  text-align: center;
+  transition: var(--urban-transition);
+}
+
+.contact-card {
+  background: var(--street-light);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px var(--trick-shadow);
+  text-align: center;
+  transition: var(--urban-transition);
+}
+
+.feature-card:hover,
+.challenge-card:hover,
+.mod-card:hover,
+.update-card:hover,
+.feed-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px var(--trick-shadow);
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px var(--trick-shadow);
+}
+
+/* Feed card specific styles with orange background */
+.feed-card {
+  background: var(--speed-rush);
+  color: var(--street-light);
+}
+
+.feed-card h3 {
+  color: var(--street-light);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.feed-card p {
+  color: var(--urban-flow);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.feed-card .author-name {
+  background: var(--grip-vibe);
+  color: var(--street-light);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.feed-card .date-badge {
+  background: var(--urban-night);
+  color: var(--street-light);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.feature-icon,
+.contact-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Update card specific styles */
+.update-card .date-badge {
+  background: var(--speed-rush);
+  color: var(--street-light);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.update-card .update-type {
+  background: var(--grip-vibe);
+  color: var(--street-light);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.feature-card h3,
+.challenge-card h3,
+.mod-card h3,
+.update-card h3 {
+  color: var(--deck-shadow);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-card h3 {
+  color: var(--deck-shadow);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--street-light);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px var(--trick-shadow);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--deck-shadow);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--park-concrete);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: var(--urban-transition);
+}
+
+.form-group textarea {
+  resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--speed-rush);
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.submit-button {
+  background: var(--ramp-gradient);
+  color: var(--street-light);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--urban-transition);
+  width: 100%;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px var(--trick-shadow);
+}
+
+/* Map Container */
+.map-container {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px var(--trick-shadow);
+}
+
+/* Contact & Map Grid */
+.contact-map-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-info-column {
+  flex: 1;
+}
+
+.map-column {
+  flex: 1;
+}
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+  .contact-map-grid {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .contact-info-column {
+    flex: 0 0 40%;
+  }
+
+  .map-column {
+    flex: 0 0 60%;
+  }
+}
+
+/* Legal Content */
+.legal-content {
+  background: var(--street-light);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px var(--trick-shadow);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.legal-content h2 {
+  color: var(--deck-shadow);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.legal-content h3 {
+  color: var(--speed-rush);
+  margin: 1.5rem 0 1rem;
+  font-size: 1.3rem;
+}
+
+.legal-content h4 {
+  color: var(--grip-vibe);
+  margin: 1rem 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.legal-content p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.legal-content ul {
+  margin: 1rem 0 1rem 2rem;
+}
+
+.legal-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.urban-footer {
+  background: var(--urban-night);
+  color: var(--urban-flow);
+  padding: 3rem 0 1rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+.footer-section {
+  width: 100%;
+}
+
+.footer-title {
+  color: var(--speed-rush);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-links li {
+  margin-bottom: 0;
+}
+
+.footer-link {
+  color: var(--urban-flow);
+  text-decoration: none;
+  transition: var(--urban-transition);
+}
+
+.footer-link:hover {
+  color: var(--speed-rush);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-item {
+  margin-bottom: 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  color: var(--urban-flow);
+  text-decoration: none;
+  transition: var(--urban-transition);
+}
+
+.social-link:hover {
+  color: var(--speed-rush);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--grip-vibe);
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.copyright-text {
+  color: var(--rail-metal);
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .footer-links {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .contact-info {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .updates-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .feed-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-zone {
+    display: none;
+  }
+
+  .burger-zone {
+    display: block;
+  }
+
+  .main-title {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-slogan {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .hero-features {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .features-list {
+    text-align: center;
+  }
+
+  .feature-item {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .feature-icon {
+    font-size: 1.5rem;
+    min-width: 30px;
+  }
+
+  .feature-text {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    max-width: 100%;
+  }
+
+  /* Street Ride Card Mobile */
+  .street-ride-card {
+    min-height: 400px;
+  }
+
+  .street-ride-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .street-ride-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .street-ride-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .street-ride-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .street-ride-features {
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .street-feature-item {
+    padding: 0.6rem 1rem;
+  }
+
+  .street-feature-text {
+    font-size: 0.8rem;
+  }
+
+  /* Scooter Mods Card Mobile */
+  .scooter-mods-card {
+    min-height: 400px;
+  }
+
+  .scooter-mods-content {
+    padding: 2rem;
+  }
+
+  .scooter-mods-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .scooter-mods-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .scooter-mods-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .scooter-mods-features {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .mod-feature-item {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .mod-feature-text {
+    font-size: 0.8rem;
+  }
+
+  /* Trick Tutorial Card Mobile */
+  .trick-tutorial-card {
+    min-height: 500px;
+  }
+
+  .trick-tutorial-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .trick-tutorial-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .trick-tutorial-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .trick-tutorial-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .trick-tutorial-grid .tutorial-card {
+    padding: 1.5rem;
+  }
+
+  .trick-tutorial-grid .tutorial-card .tutorial-icon {
+    font-size: 2.5rem;
+  }
+
+  .trick-tutorial-grid .tutorial-card h3 {
+    font-size: 1.2rem;
+  }
+
+  /* Park Challenges Mobile */
+  .challenges-description {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .challenges-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .challenges-grid {
+    gap: 1.5rem;
+  }
+
+  .challenges-grid .challenge-card {
+    padding: 1.5rem;
+    min-height: 180px;
+  }
+
+  .challenges-grid .challenge-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .challenges-grid .challenge-card p {
+    font-size: 0.9rem;
+  }
+
+  /* Rider Shoutouts Mobile */
+  .shoutouts-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .shoutouts-grid {
+    gap: 1.5rem;
+  }
+
+  .shoutouts-grid .shoutout-card {
+    min-height: 250px;
+  }
+
+  .shoutouts-grid .shoutout-card .shoutout-content {
+    padding: 1.2rem;
+  }
+
+  .shoutouts-grid .shoutout-card .shoutout-name {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .shoutouts-grid .shoutout-card .shoutout-title {
+    font-size: 0.8rem;
+  }
+
+  .shoutouts-grid .shoutout-card .shoutout-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0.8rem 0;
+  }
+
+  .shoutouts-grid .shoutout-card .shoutout-rating {
+    margin-top: 0.8rem;
+  }
+
+  .shoutouts-grid .shoutout-card .shoutout-rating .star {
+    font-size: 1rem;
+  }
+
+  .features-grid,
+  .tutorial-grid,
+  .challenges-grid,
+  .mods-grid,
+  .updates-grid,
+  .feed-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card,
+  .challenge-card,
+  .mod-card,
+  .update-card,
+  .feed-card {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .contact-card {
+    padding: 1rem;
+  }
+
+  .contact-card h3 {
+    font-size: 1rem;
+  }
+
+  .footer-content {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 0 15px;
+  }
+
+  .main-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .hero-slogan {
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-features {
+    padding: 1rem;
+    margin-top: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .feature-item {
+    margin-bottom: 0.8rem;
+  }
+
+  .feature-icon {
+    font-size: 1.3rem;
+    min-width: 25px;
+  }
+
+  .feature-text {
+    font-size: 0.9rem;
+  }
+
+  /* Street Ride Card Small Mobile */
+  .street-ride-card {
+    min-height: 350px;
+  }
+
+  .street-ride-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .street-ride-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .street-ride-description {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .street-ride-subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .street-ride-features {
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  .street-feature-item {
+    padding: 0.5rem 0.8rem;
+  }
+
+  .street-feature-text {
+    font-size: 0.7rem;
+  }
+
+  /* Scooter Mods Card Small Mobile */
+  .scooter-mods-card {
+    min-height: 350px;
+  }
+
+  .scooter-mods-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .scooter-mods-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .scooter-mods-description {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .scooter-mods-subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .scooter-mods-features {
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  .mod-feature-item {
+    padding: 0.5rem 0.8rem;
+  }
+
+  .mod-feature-text {
+    font-size: 0.7rem;
+  }
+
+  /* Trick Tutorial Card Small Mobile */
+  .trick-tutorial-card {
+    min-height: 450px;
+  }
+
+  .trick-tutorial-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .trick-tutorial-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .trick-tutorial-description {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .trick-tutorial-grid {
+    gap: 1rem;
+  }
+
+  .trick-tutorial-grid .tutorial-card {
+    padding: 1.2rem;
+  }
+
+  .trick-tutorial-grid .tutorial-card .tutorial-icon {
+    font-size: 2rem;
+  }
+
+  .trick-tutorial-grid .tutorial-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .trick-tutorial-grid .tutorial-card p {
+    font-size: 0.85rem;
+  }
+
+  .trick-tutorial-grid .tutorial-card .difficulty-badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  /* Park Challenges Small Mobile */
+  .challenges-description {
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .challenges-subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .challenges-grid {
+    gap: 1rem;
+  }
+
+  .challenges-grid .challenge-card {
+    padding: 1.2rem;
+    min-height: 160px;
+  }
+
+  .challenges-grid .challenge-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .challenges-grid .challenge-card p {
+    font-size: 0.85rem;
+  }
+
+  /* Rider Shoutouts Small Mobile */
+  .shoutouts-description {
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .shoutouts-grid {
+    gap: 1rem;
+  }
+
+  .shoutouts-grid .shoutout-card {
+    min-height: 220px;
+  }
+
+  .shoutouts-grid .shoutout-card .shoutout-content {
+    padding: 1rem;
+  }
+
+  .shoutouts-grid .shoutout-card .shoutout-name {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .shoutouts-grid .shoutout-card .shoutout-title {
+    font-size: 0.75rem;
+  }
+
+  .shoutouts-grid .shoutout-card .shoutout-text {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin: 0.6rem 0;
+  }
+
+  .shoutouts-grid .shoutout-card .shoutout-rating {
+    margin-top: 0.6rem;
+  }
+
+  .shoutouts-grid .shoutout-card .shoutout-rating .star {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .main-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-slogan {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-features {
+    padding: 0.8rem;
+    margin-top: 1.2rem;
+    gap: 1.2rem;
+  }
+
+  .feature-item {
+    margin-bottom: 0.6rem;
+  }
+
+  .feature-icon {
+    font-size: 1.2rem;
+    min-width: 20px;
+  }
+
+  .feature-text {
+    font-size: 0.8rem;
+  }
+
+  .contact-card {
+    padding: 0.8rem;
+  }
+
+  .contact-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .play-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Form Processing Overlay */
+.processing-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.processing-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.processing-spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid var(--street-light);
+  border-top: 4px solid var(--speed-rush);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.processing-text {
+  color: var(--street-light);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Notification */
+.notification {
+  position: fixed;
+  bottom: -100px;
+  left: 0;
+  width: 100%;
+  background: var(--speed-rush);
+  color: var(--street-light);
+  padding: 1rem 2rem;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(255, 107, 53, 0.3);
+  z-index: 10000;
+  transition: bottom 0.5s ease;
+  visibility: hidden;
+}
+
+.notification.show {
+  bottom: 0;
+}
+
+.notification.success {
+  background: var(--grip-vibe);
+  box-shadow: 0 5px 20px rgba(46, 204, 113, 0.3);
+}
+
+.notification.error {
+  background: #e74c3c;
+  box-shadow: 0 5px 20px rgba(231, 76, 60, 0.3);
+}
+
+/* Form Validation Styles */
+.form-group.error input,
+.form-group.error textarea {
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+.form-group.error label {
+  color: #e74c3c;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: none;
+}
+
+.form-group.error .error-message {
+  display: block;
+}
+
+/* Cookie Bar Styles */
+.cookie-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--urban-night);
+  color: var(--street-light);
+  padding: 20px;
+  z-index: 1000;
+  transform: translateY(100%);
+  transition: var(--urban-transition);
+  box-shadow: 0 -4px 20px var(--trick-shadow);
+  border-top: 3px solid var(--speed-rush);
+}
+
+.cookie-bar.show {
+  transform: translateY(0);
+}
+
+.cookie-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.cookie-text {
+  flex: 1;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--urban-flow);
+}
+
+.accept-cookies-btn {
+  background: var(--ramp-gradient);
+  color: var(--street-light);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: var(--urban-transition);
+  box-shadow: 0 4px 15px var(--trick-shadow);
+  white-space: nowrap;
+}
+
+.accept-cookies-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--trick-shadow);
+  background: linear-gradient(135deg, #f39c12, #ff6b35);
+}
+
+.accept-cookies-btn:active {
+  transform: translateY(0);
+}
+
+/* Mobile Responsive for Cookie Bar */
+@media (max-width: 768px) {
+  .cookie-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .cookie-text {
+    font-size: 0.9rem;
+  }
+
+  .accept-cookies-btn {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cookie-bar {
+    padding: 15px;
+  }
+
+  .cookie-text {
+    font-size: 0.85rem;
+  }
+
+  .accept-cookies-btn {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}

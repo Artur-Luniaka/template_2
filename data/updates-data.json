@@ -1,0 +1,22 @@
+{
+  "updates": [
+    {
+      "date": "December 15, 2024",
+      "title": "New Urban Park Environment",
+      "description": "Introducing a massive new urban skate park with multiple levels, hidden areas, and challenging obstacles. Features realistic city architecture and dynamic lighting effects.",
+      "type": "New Content"
+    },
+    {
+      "date": "December 10, 2024",
+      "title": "Enhanced Physics Engine",
+      "description": "Completely overhauled physics system for more realistic trick execution and landing mechanics. Improved collision detection and momentum preservation.",
+      "type": "Technical"
+    },
+    {
+      "date": "December 5, 2024",
+      "title": "Advanced Trick System",
+      "description": "Added 15 new trick combinations and improved the trick chaining system. Players can now create longer, more complex trick sequences.",
+      "type": "Gameplay"
+    }
+  ]
+}

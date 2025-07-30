@@ -1,0 +1,34 @@
+{
+  "tutorials": [
+    {
+      "title": "Basic Flip Tricks",
+      "description": "Master the fundamental flip techniques including front flips, back flips, and 360 spins. Learn proper finger positioning and timing for maximum air time.",
+      "difficulty": "Beginner"
+    },
+    {
+      "title": "Rail Grinding Mastery",
+      "description": "Perfect your rail grinding skills with step-by-step instructions on balance, speed control, and trick combinations while grinding on rails and ledges.",
+      "difficulty": "Intermediate"
+    },
+    {
+      "title": "Advanced Air Tricks",
+      "description": "Take your skills to the next level with complex aerial maneuvers including double flips, cork spins, and combination tricks that will impress any crowd.",
+      "difficulty": "Advanced"
+    },
+    {
+      "title": "Street Style Combos",
+      "description": "Learn to chain multiple tricks together in fluid combinations. Master the art of trick transitions and create your own signature style.",
+      "difficulty": "Expert"
+    },
+    {
+      "title": "Ramp Techniques",
+      "description": "Conquer massive ramps with proper approach angles, speed management, and landing techniques. Build confidence for bigger air and more complex tricks.",
+      "difficulty": "Intermediate"
+    },
+    {
+      "title": "Urban Course Navigation",
+      "description": "Navigate through complex urban environments with precision. Learn to read terrain, plan your line, and adapt to different obstacles and challenges.",
+      "difficulty": "Advanced"
+    }
+  ]
+}
