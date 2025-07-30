@@ -447,17 +447,7 @@ function showLoadingError() {
 // Urban utility functions
 function launchRampBoost() {
   console.log("🚀 Launching ramp boost...");
-  // Add urban bounce animation to play button
-  const playButton = document.querySelector(".play-button");
-  if (playButton) {
-    playButton.classList.add("urban-bounce");
-    setTimeout(() => {
-      playButton.classList.remove("urban-bounce");
-    }, 1000);
-  }
-
-  // In real app, this would launch the game
-  // Game launch functionality removed
+  // Functionality removed
 }
 
 // Export functions for use in other scripts

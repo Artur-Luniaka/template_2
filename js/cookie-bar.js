@@ -17,15 +17,15 @@ document.addEventListener("DOMContentLoaded", function () {
       // Save to localStorage
       localStorage.setItem("cookiesAccepted", "true");
 
-      // Hide cookie bar with animation
+      // Hide cookie bar
       cookieBar.classList.remove("show");
 
-      // Remove from DOM after animation
+      // Remove from DOM
       setTimeout(() => {
         if (cookieBar.parentNode) {
           cookieBar.parentNode.removeChild(cookieBar);
         }
-      }, 300);
+      }, 100);
     });
   } else if (cookieBar) {
     // Remove cookie bar if already accepted
