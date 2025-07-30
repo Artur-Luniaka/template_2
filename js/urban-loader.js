@@ -63,6 +63,18 @@ function initializeBurgerMenu() {
       } else {
         document.body.classList.remove("menu-open");
       }
+
+      // Hide cookie bar when mobile menu is open (if cookies not accepted)
+      const cookieBar = document.getElementById("cookie-bar");
+      const cookiesAccepted = localStorage.getItem("cookiesAccepted");
+
+      if (!cookiesAccepted && cookieBar) {
+        if (mobileMenu.classList.contains("active")) {
+          cookieBar.classList.remove("show");
+        } else {
+          cookieBar.classList.add("show");
+        }
+      }
     });
 
     // Close menu when clicking on links
@@ -72,6 +84,14 @@ function initializeBurgerMenu() {
         burgerButton.classList.remove("active");
         mobileMenu.classList.remove("active");
         document.body.classList.remove("menu-open");
+
+        // Show cookie bar again when menu closes (if cookies not accepted)
+        const cookieBar = document.getElementById("cookie-bar");
+        const cookiesAccepted = localStorage.getItem("cookiesAccepted");
+
+        if (!cookiesAccepted && cookieBar) {
+          cookieBar.classList.add("show");
+        }
       });
     });
 
@@ -84,6 +104,14 @@ function initializeBurgerMenu() {
         burgerButton.classList.remove("active");
         mobileMenu.classList.remove("active");
         document.body.classList.remove("menu-open");
+
+        // Show cookie bar again when menu closes (if cookies not accepted)
+        const cookieBar = document.getElementById("cookie-bar");
+        const cookiesAccepted = localStorage.getItem("cookiesAccepted");
+
+        if (!cookiesAccepted && cookieBar) {
+          cookieBar.classList.add("show");
+        }
       }
     });
   }
